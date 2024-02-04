@@ -97,7 +97,7 @@ composer install
 Note: if you have PHP `^5.6 || ~7.0`, `composer install` will fail. To overcome that version check use `--ignore-platform-req=php` option/flag.
 
 ```powershell
-composer install  --ignore-platform-req=php
+composer install --ignore-platform-req=php --ignore-platform-req=ext-zip
 ```
 
 ### If running in a local setup;
