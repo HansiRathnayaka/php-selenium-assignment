@@ -96,7 +96,7 @@ class FacebookLoginTest extends TestCase
         $this->webDriver->wait(3)->until(
             WebDriverExpectedCondition::visibilityOfElementLocated(WebDriverBy::name('login'))
         );
-        
+
         $loginButton->click();
         
         $errorMessage = $this->webDriver->findElement(WebDriverBy::cssSelector('#facebook ._44mg ._9ay7'))->getText();
