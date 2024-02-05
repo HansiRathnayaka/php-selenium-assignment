@@ -99,7 +99,8 @@ class FacebookLoginTest extends TestCase
         
         $loginButton->click();
         
-        $this->assertTrue($this->webDriver->getCurrentURL() === 'https://www.facebook.com/login/web/?email=CORRECT-EMAIL-HERE%40gmail.com&is_from_lara=1');
+        $errorMessage = $this->webDriver->findElement(WebDriverBy::cssSelector('#facebook ._44mg ._9ay7'))->getText();
+        $this->assertEquals('The email address you entered isn\'t connected to an account. Find your account and log in.', $errorMessage);
     }
 
     // Test for incorrect email and password combination
